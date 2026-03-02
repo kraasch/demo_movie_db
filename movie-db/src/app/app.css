@@ -1,0 +1,18 @@
+
+/* DEBUG */
+.myitem {
+  overflow-x: hidden;
+  border: solid;
+  border-color: #f00;
+  padding: 10px;
+}
+
+.myitem {
+  padding: 5px;
+}
+
+.mybox {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+

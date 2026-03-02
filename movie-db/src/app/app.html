@@ -1,6 +1,9 @@
 
+<h1>Best Movies of All Time</h1>
+<div class="mybox">
 @for (item of items; track item.id) {
 <app-tile
+  class="myitem"
   title="{{item.title}}"
   year="{{item.yr}}"
   watched="{{item.watched}}"
@@ -12,5 +15,6 @@
 >
 </app-tile>
 }
+</div>
 <router-outlet />
 

@@ -21,7 +21,12 @@ import { Component, Input } from '@angular/core';
       <div></div>
     </div>
   `,
-  styles: ``,
+  styles: `
+    img {
+      width: 100%;
+      height: 240px;
+    }
+`,
 })
 export class HoverImg {
   @Input() imgUrl: string = "";

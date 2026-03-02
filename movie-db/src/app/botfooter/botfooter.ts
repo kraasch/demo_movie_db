@@ -31,7 +31,9 @@ import { Component } from '@angular/core';
       <nav>
         <h6 class="footer-title">weblinks</h6>
         <div class="grid grid-flow-col gap-4">
+
           <a href="https://github.com/kraasch/">
+          <span style="white-space: nowrap">
             <svg fill="currentColor" height="20" width="20" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-267 265 264.5 225.1" xml:space="preserve">
               <path d="M-21.8,354.4c-0.8-0.9-1.3-2.3-1.2-3.5c0.9-20.1-1.8-39.6-8.6-58.6c-0.9-2.4-2-3.3-4.5-2.6c-5.6,1.7-11.4,3-16.9,5
@@ -47,7 +49,17 @@ import { Component } from '@angular/core';
               <path d="M-99.4,423.7c-11.2,10.3-11.2,33,0,43.2c6.5,5.9,15.3,5.6,21.4-0.7c5.6-5.8,7.6-13.1,7.8-21c-0.2-7.9-2.2-15.1-7.9-20.9
 	          	C-84.2,418-93,417.8-99.4,423.7z" />
             </svg>
+          </span>
           </a>
+
+          <a href="https://kraasch.eu/">
+          <span style="white-space: nowrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+            </svg>
+          </span>
+          </a>
+
         </div>
       </nav>
     </footer>

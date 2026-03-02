@@ -23,7 +23,7 @@ import { ThemeCtrl } from '../themectrl/themectrl';
         ############################## HIDE THIS CONTENT -->
       </div>
       <div class="navbar-center">
-        <a class="btn btn-ghost text-xl">Best Movies of All Time</a>
+        <a class="btn btn-ghost text-xl">My Favorite Movies List</a>
       </div>
       <div class="navbar-end">
         <!-- ############################## HIDE THIS CONTENT

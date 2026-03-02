@@ -2,10 +2,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Tile } from './tile/tile';
+import { TopNav } from './topnav/topnav';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Tile],
+  imports: [RouterOutlet, Tile, TopNav],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

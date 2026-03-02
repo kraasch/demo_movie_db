@@ -5,11 +5,13 @@
   themes: business --default --prefersdark, corporate;
 }
 
-/* DEBUG */
 body {
-  overflow-x: hidden;
   border: solid;
+  padding: 50px;
+  /* DEBUG */
+  /*
   border-color: #0f0;
-  padding: 10px;
+  overflow-x: hidden;
+  */
 }
 

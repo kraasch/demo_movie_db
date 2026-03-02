@@ -27,6 +27,10 @@ import { Wheel } from '../wheel/wheel';
     </div>
   `,
   styles: `
+    .card {
+      width: 100%;
+      height: 100%;
+    }
     @utility btn {
       @apply rounded-full;
     }

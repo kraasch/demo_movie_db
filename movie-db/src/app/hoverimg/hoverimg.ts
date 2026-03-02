@@ -23,6 +23,7 @@ import { Component, Input } from '@angular/core';
   `,
   styles: `
     img {
+      padding: 10px;
       width: 100%;
       height: 240px;
     }

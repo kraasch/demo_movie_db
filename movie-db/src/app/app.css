@@ -8,11 +8,14 @@
   padding: 5px;
 }
 
-/* DEBUG */
 .myitem {
-  overflow-x: hidden;
-  border: solid;
-  border-color: #f00;
   padding: 10px;
+  /* DEBUG */
+  /*
+  overflow-x: hidden;
+  border-color: #f00;
+  border: solid;
+  */
 }
+
 

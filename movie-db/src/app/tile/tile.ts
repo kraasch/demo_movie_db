@@ -6,9 +6,10 @@ import { Component, Input } from '@angular/core';
   template: `
     <div class="card bg-base-100 w-96 shadow-sm">
       <figure>
-        <img
-          src="{{ image }}"
-          alt="Movie" />
+        <!--
+          <img src="{{image}}" alt="Movie" />
+        -->
+        <img src="https://flxt.tmsimg.com/assets/p12407944_p_v10_ac.jpg" alt="Movie" />
       </figure>
       <div class="card-body">
         <h2 class="card-title">{{title}} ({{culture}}, {{year}})</h2>

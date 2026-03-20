@@ -49,55 +49,55 @@ import { CookieBar } from '../cookiebar/cookiebar';
       <ul class="menu bg-base-200 min-h-full w-80 p-4">
 
         <!-- Sidebar content here -->
+        <div class="divider divider-secondary">Search</div>
         <li>
-          <label>Search</label>
           <input type="text" placeholder="Type here" class="input" />
         </li>
 
-          <label>Culture</label>
-          <form>
-            <input class="btn btn-square" type="reset" value="×"/>
-            <input aria-label="Japan"   class="btn" type="checkbox" name="frameworks" />
-            <input aria-label="Germany" class="btn" type="checkbox" name="frameworks" />
-            <input aria-label="USA"     class="btn" type="checkbox" name="frameworks" />
-            <input aria-label="Italy"   class="btn" type="checkbox" name="frameworks" />
-            <input aria-label="Sweden"  class="btn" type="checkbox" name="frameworks" />
-            <input aria-label="Korea"   class="btn" type="checkbox" name="frameworks" />
-            <input aria-label="France"  class="btn" type="checkbox" name="frameworks" />
-            <input aria-label="Mexico"  class="btn" type="checkbox" name="frameworks" />
-          </form>
+        <div class="divider divider-secondary">Culture</div>
+        <form class="my-padded-tags-form">
+          <input class="btn btn-square" type="reset" value="×"/>
+          <input aria-label="Japan"   class="btn" type="checkbox" name="frameworks" />
+          <input aria-label="Germany" class="btn" type="checkbox" name="frameworks" />
+          <input aria-label="USA"     class="btn" type="checkbox" name="frameworks" />
+          <input aria-label="Italy"   class="btn" type="checkbox" name="frameworks" />
+          <input aria-label="Sweden"  class="btn" type="checkbox" name="frameworks" />
+          <input aria-label="Korea"   class="btn" type="checkbox" name="frameworks" />
+          <input aria-label="France"  class="btn" type="checkbox" name="frameworks" />
+          <input aria-label="Mexico"  class="btn" type="checkbox" name="frameworks" />
+        </form>
 
-          <label>Decades</label>
-          <div class="w-full max-w-xs">
-            <input type="range" min="0" max="100" value="100" class="range" step="10" />
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-            </div>
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>40</span>
-              <span>50</span>
-              <span>60</span>
-              <span>70</span>
-              <span>80</span>
-              <span>90</span>
-              <span>00</span>
-              <span>10</span>
-              <span>20</span>
-              <span>30</span>
-            </div>
+        <div class="divider divider-secondary">Decades</div>
+        <div class="w-full max-w-xs">
+          <input type="range" min="0" max="100" value="100" class="range" step="10" />
+          <div class="flex justify-between px-2.5 mt-2 text-xs">
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
           </div>
+          <div class="flex justify-between px-2.5 mt-2 text-xs">
+            <span>40</span>
+            <span>50</span>
+            <span>60</span>
+            <span>70</span>
+            <span>80</span>
+            <span>90</span>
+            <span>00</span>
+            <span>10</span>
+            <span>20</span>
+            <span>30</span>
+          </div>
+        </div>
 
+        <div class="divider divider-secondary">IMDB Rating</div>
         <li>
-          <label>IMDB Rating</label>
             <div class="rating gap-1">
               <input type="radio" name="my-heart-rating" class="mask mask-heart bg-red-400"    aria-label="01star" />
               <input type="radio" name="my-heart-rating" class="mask mask-heart bg-red-300"    aria-label="02star" />
@@ -117,6 +117,11 @@ import { CookieBar } from '../cookiebar/cookiebar';
   </div>
   `,
   styles: `
+.my-padded-tags-form>input {
+  margin-right: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
 .mybox {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

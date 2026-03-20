@@ -15,6 +15,7 @@ import { CookieBar } from '../cookiebar/cookiebar';
       type="checkbox"
       class="drawer-toggle"
       [checked]="drawerOpen"
+      (change)="drawerOpen = $any($event.target).checked"
     />
     <div class="drawer-content">
 
@@ -68,7 +69,7 @@ import { CookieBar } from '../cookiebar/cookiebar';
 
           <label>Decades</label>
           <div class="w-full max-w-xs">
-            <input type="range" min="0" max="100" value="4" class="range" step="10" />
+            <input type="range" min="0" max="100" value="100" class="range" step="10" />
             <div class="flex justify-between px-2.5 mt-2 text-xs">
               <span>|</span>
               <span>|</span>
@@ -165,6 +166,6 @@ export class FilterBar {
 
   addItem(newItem: string) {
     console.log(newItem);
-    this.drawerOpen = ! this.drawerOpen;
+    this.drawerOpen = true;
   }
 }

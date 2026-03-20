@@ -46,9 +46,71 @@ import { CookieBar } from '../cookiebar/cookiebar';
     <div class="drawer-side">
       <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
       <ul class="menu bg-base-200 min-h-full w-80 p-4">
+
         <!-- Sidebar content here -->
-        <li><a>Sidebar Item 1</a></li>
-        <li><a>Sidebar Item 2</a></li>
+        <li>
+          <label>Search</label>
+          <input type="text" placeholder="Type here" class="input" />
+        </li>
+
+          <label>Culture</label>
+          <form>
+            <input class="btn btn-square" type="reset" value="×"/>
+            <input aria-label="Japan"   class="btn" type="checkbox" name="frameworks" />
+            <input aria-label="Germany" class="btn" type="checkbox" name="frameworks" />
+            <input aria-label="USA"     class="btn" type="checkbox" name="frameworks" />
+            <input aria-label="Italy"   class="btn" type="checkbox" name="frameworks" />
+            <input aria-label="Sweden"  class="btn" type="checkbox" name="frameworks" />
+            <input aria-label="Korea"   class="btn" type="checkbox" name="frameworks" />
+            <input aria-label="France"  class="btn" type="checkbox" name="frameworks" />
+            <input aria-label="Mexico"  class="btn" type="checkbox" name="frameworks" />
+          </form>
+
+          <label>Decades</label>
+          <div class="w-full max-w-xs">
+            <input type="range" min="0" max="100" value="4" class="range" step="10" />
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+            </div>
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>40</span>
+              <span>50</span>
+              <span>60</span>
+              <span>70</span>
+              <span>80</span>
+              <span>90</span>
+              <span>00</span>
+              <span>10</span>
+              <span>20</span>
+              <span>30</span>
+            </div>
+          </div>
+
+        <li>
+          <label>IMDB Rating</label>
+            <div class="rating gap-1">
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-red-400"    aria-label="01star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-red-300"    aria-label="02star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-orange-300" aria-label="03star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-orange-400" aria-label="04star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-yellow-400" aria-label="05star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-yellow-300" aria-label="06star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-lime-300"   aria-label="07star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-lime-400"   aria-label="08star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-green-400"  aria-label="09star" />
+              <input type="radio" name="my-heart-rating" class="mask mask-heart bg-blue-500"   aria-label="10star" checked="checked" />
+            </div>
+        </li>
+
       </ul>
     </div>
   </div>
@@ -99,12 +161,9 @@ export class FilterBar {
    { id: 20, yr: 2021, watched: '2024-11', culture: 'us', rating: '8.0', imdb: 'https://www.imdb.com/title/tt10366460/', title: 'CODA', description: 'A movie about a fisher family of who parents and son are deaf.', img: 'https://image.tmdb.org/t/p/w600_and_h900_face/BzVjmm8l23rPsijLiNLUzuQtyd.jpg' },
   ];
 
-  items2 : string[] = [];
-
   drawerOpen = false;
 
   addItem(newItem: string) {
-    this.items2.push(newItem);
     console.log(newItem);
     this.drawerOpen = ! this.drawerOpen;
   }

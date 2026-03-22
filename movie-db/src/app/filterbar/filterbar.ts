@@ -40,22 +40,31 @@ export class FilterBar {
 
   // filter defaults.
   minYear = 0;
+  maxYear = 0;
   heartRating = '0';
   cultures: string[] = [];
   myfilters = new FormGroup({
-    searchName: new FormControl('')
+    searchName: new FormControl(''),
+    searchBody:  new FormControl('')
   });
 
   // computed filtered items list.
   get filteredItems() {
     let filtered = this.items.filter( e => {
       const searchName = this.myfilters.get('searchName')?.value?.toLowerCase() ?? '';
+      const searchBody = this.myfilters.get('searchBody')?.value?.toLowerCase() ?? '';
       const heartRating = parseFloat(this.heartRating);
       console.log(searchName);
       // apply decade filter.
       return e.yr >= 1950 + (this.minYear * 10) &&
-           // apply search filter.
-           (searchName === '' || e.title.toLowerCase().includes(searchName)) &&
+           // apply name search filter.
+           (searchName === '' ||
+             e.title.toLowerCase().includes(searchName)) &&
+           // apply body search filter.
+           (searchBody === '' ||
+             e.title.toLowerCase().includes(searchBody) ||
+             e.yr.toString().toLowerCase().includes(searchBody) ||
+             e.description.toLowerCase().includes(searchBody)) &&
            // apply heart filter.
            (
              (heartRating == 0 ) ||

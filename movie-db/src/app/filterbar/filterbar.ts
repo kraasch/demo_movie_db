@@ -40,7 +40,7 @@ export class FilterBar {
 
   // filter defaults.
   minYear = 0;
-  heartRating = '8';
+  heartRating = '0';
   cultures: string[] = [];
   myfilters = new FormGroup({
     searchName: new FormControl('')
@@ -50,14 +50,17 @@ export class FilterBar {
   get filteredItems() {
     let filtered = this.items.filter( e => {
       const searchName = this.myfilters.get('searchName')?.value?.toLowerCase() ?? '';
+      const heartRating = parseFloat(this.heartRating);
       console.log(searchName);
       // apply decade filter.
       return e.yr >= 1950 + (this.minYear * 10) &&
            // apply search filter.
            (searchName === '' || e.title.toLowerCase().includes(searchName)) &&
            // apply heart filter.
-           parseFloat(e.rating) >= parseFloat(this.heartRating) &&
-           parseFloat(e.rating) <= (parseFloat(this.heartRating) + 1.0);
+           (
+             (heartRating == 0 ) ||
+             (parseFloat(e.rating) >= heartRating && parseFloat(e.rating) <= heartRating + 1.0)
+           );
     });
     // if there is culture tags set, then apply the filter.
     if (this.cultures.length > 0) {
